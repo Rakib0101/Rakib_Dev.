@@ -26,8 +26,9 @@ hr{
 }
 .header-section{
     background: linear-gradient(#631e3fb6, #000000c4), url(images/hero_bg.jpg);
-    min-height: 100vh;
     background-size: cover;
+    min-height: 600px;
+    padding: 40px 0;
 
 }
 .top-header{
@@ -347,6 +348,9 @@ hr{
     }
     .display-flex{
         flex-direction: column;
+    }
+    .header-section .display-flex{
+        flex-direction: column-reverse;
     }
     .top-header{
         flex-direction: column;    
