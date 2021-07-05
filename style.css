@@ -64,13 +64,14 @@ hr{
 .main-navigation ul li a{
     color: #ddd;
     font-size: 22px;
+    border-bottom: 2px solid transparent;
 }
 .main-navigation .active{
-    border-bottom: 1px solid #C4DB47;
+    border-bottom: 2px solid #C4DB47;
     color: #C4DB47;
 }
 .main-navigation ul li:hover a{
-    border-bottom: 1px solid #C4DB47;
+    border-bottom: 2px solid #C4DB47;
     color: #C4DB47;
     transition: 0.5s;
 }
@@ -245,7 +246,7 @@ hr{
 /* Contact Section Style */
 .contact-section{
     padding-top: 40px;
-    background: #000000;
+    background: #2a2a2a;
 }
 .contact-section h2{
     font-size: 40px;
@@ -288,6 +289,7 @@ hr{
 .contact-form{
     width: 70%;
     padding: 0 40px;
+    padding-bottom: 20px;
 }
 .contact-form .name{
     display: flex;
@@ -296,6 +298,19 @@ hr{
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
+}
+.contact-form form input[type=submit]{
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 10px;
+    background: #631E3F;
+    border: none;
+    color: #FFFFFF;
+}
+.contact-form form input[type=submit]:hover{
+    background: #FFFFFF;
+    border: none;
+    color: #000000;
 }
 .name input:first-child{
     margin-right: 10px;
