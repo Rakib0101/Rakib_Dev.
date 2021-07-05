@@ -6,6 +6,7 @@
 }
 ul{
     display: flex;
+    flex-direction: row;
 }
 li{
     display: inline-block;
@@ -32,6 +33,7 @@ hr{
 .top-header{
     display: flex;
     padding: 10px 0;
+    flex-direction: row;
     padding-bottom: 20px;
 }
 .left-top-header, .right-top-header{
@@ -78,6 +80,8 @@ hr{
 /* Main Header Style Here */
 .display-flex{
     display: flex;
+    flex-basis: auto;
+    flex-direction: row;
 }
 .header-section .left-side h2{
     padding-top: 80px;
@@ -96,9 +100,7 @@ hr{
     border: 1px solid #FFFFFF;
     color: #FFFFFF;
 }
-.left-side, .right-side{
-    width: 50%;
-}
+
 .header-section .right-side img{
     padding-top: 100px;
     padding-left: 100px;
@@ -112,6 +114,9 @@ hr{
  }
  .about-section .left-side img{
      width: 100%;
+ }
+ .about-section .right-side{
+     padding-left: 50px;
  }
  .about-section .right-side h1{
      font-size: 42px;
@@ -174,12 +179,12 @@ hr{
 }
 .service-section .display-flex{
     justify-content: space-around;
+    flex-direction: row;
 }
 .service-section .cart-1, .cart-2, .cart-3, .cart-4{
     border-left: none;
     background: #FFFFFF;
     margin: 10px;
-    width: 25%;
     border-radius: 10px;
     padding: 0 10px;
     border: 2px solid #631e3f;
@@ -223,7 +228,7 @@ hr{
     background: url(images/banner-32.png);
     background-repeat: no-repeat;
     background-size: cover;
-     background-position: center top;
+    background-position: center top;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -232,9 +237,15 @@ hr{
 }
 .grid-2{
     background: url(images/banner-33.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 200px;
 }
 .grid-3{
     background: url(images/banner-34.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 200px;
 }
 .grid-1 h2{
     color: #FFFFFF;
@@ -275,8 +286,14 @@ hr{
     font-size: 20px;
     color: #FFFFFF;
 }
-.contact-section .contact-info{
-    width: 30%;
+.contact-section .display-flex{
+    flex-direction: row;
+}
+.contact-section .display-flex .contact-info{
+    flex-grow: 1;
+}
+.contact-section .display-flex .contact-form{
+    flex-grow: 2;
 }
 .contact-info .social-media{
     padding-top: 30px;
@@ -287,8 +304,9 @@ hr{
     color: #631e3f;
 }
 .contact-form{
-    width: 70%;
     padding: 0 40px;
+    align-self: flex-end;
+    flex-basis: auto;
     padding-bottom: 20px;
 }
 .contact-form .name{
@@ -319,3 +337,94 @@ hr{
     width: 100%;
     padding: 10px;
 }
+
+
+
+/* Responsive Style Here  */
+@media only screen and (max-width: 600px) {
+    ul{
+        flex-direction: column;
+    }
+    .display-flex{
+        flex-direction: column;
+    }
+    .top-header{
+        flex-direction: column;    
+    }
+    .header-section .left-side h1{
+        font-size: 32px;
+    }
+    .logo-area{
+        width: 100%;
+    }
+    .left-top-header, .right-top-header{
+        display: none;
+    }
+    .header-section .right-side img{
+        padding-top: 100px;
+        width: 100%;
+        padding-left: 0px;
+        justify-content: flex-start;   
+    }
+    .main-navigation ul li a{
+        font-size: 12px;
+        border-bottom: 2px solid transparent;
+    }
+    .main-navigation .active{
+        border-bottom: 2px solid #C4DB47;
+        color: #C4DB47;
+    }
+    .main-navigation ul li:hover a{
+        border-bottom: 2px solid #C4DB47;
+        color: #C4DB47;
+        transition: 0.5s;
+    }
+    .service-section .display-flex{
+        flex-direction: column;
+    }
+    .cart-2, .cart-4{
+        margin-top: 20px;
+    }
+    .gallery{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-section .display-flex{
+        flex-direction: column;
+    }
+    .contact-form{
+        padding: 0;
+    }
+    .contact-form form input[type=submit]{
+        width: 100%;
+        margin: 10px 0;
+    }
+    .copyright span{
+        font-size: 12px;
+    }
+    .contact-section .social-media{
+        text-align: center;
+    }
+    .contact-section .social-media ul{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .address{
+        font-size: 16px;
+        text-align: center;
+        padding: 10px 0;
+        color: #FFFFFF;
+        line-height: 2em;
+    }
+    .address >i{
+        font-size: 18px;
+    }
+    .contact-section .contact-info span{
+        font-size: 14px;
+        color: #FFFFFF;
+        text-align: center;
+        display: block;
+    }
+}
+
+    
