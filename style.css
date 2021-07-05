@@ -258,7 +258,7 @@ hr{
 /* Contact Section Style */
 .contact-section{
     padding-top: 40px;
-    background: #2a2a2a;
+    background: #9B1FE8;
 }
 .contact-section h2{
     font-size: 40px;
@@ -272,7 +272,7 @@ hr{
     color: #FFFFFF;
 }
 .copyright a{
-    color: #631e3f;
+    color: #000000;
 }
 .address{
     font-size: 24px;
@@ -302,7 +302,7 @@ hr{
 }
 .contact-info .social-media ul li a{
     font-size: 24px;
-    color: #631e3f;
+    color: #000000;
 }
 .contact-form{
     padding: 0 40px;
@@ -317,19 +317,25 @@ hr{
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
+    background: rgba(0, 0 , 0, 0.3);
+    outline: 0;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+}
+.contact-form input::placeholder{
+    color: #ddd;
 }
 .contact-form form input[type=submit]{
     width: 20%;
     margin-left: 40%;
     margin-top: 10px;
-    background: #631E3F;
-    border: none;
+    background: rgba(0, 0 , 0, 0.3);
+    border: 2px solid #000000;
     color: #FFFFFF;
 }
 .contact-form form input[type=submit]:hover{
-    background: #FFFFFF;
-    border: none;
-    color: #000000;
+    background: transparent;
+    cursor: pointer;
 }
 .name input:first-child{
     margin-right: 10px;
@@ -337,8 +343,13 @@ hr{
 .contact-form textarea{
     width: 100%;
     padding: 10px;
+    background: rgba(0, 0 , 0, 0.3);
+    outline: 0;
+    border: 1px solid #000000;
 }
-
+.contact-form textarea::placeholder{
+    color: #ddd;
+}
 
 
 /* Responsive Style Here  */
