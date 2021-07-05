@@ -28,7 +28,7 @@ hr{
     background: linear-gradient(#631e3fb6, #000000c4), url(images/hero_bg.jpg);
     background-size: cover;
     min-height: 600px;
-    padding: 40px 0;
+    padding-bottom: 40px;
 
 }
 .top-header{
